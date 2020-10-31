@@ -31,8 +31,8 @@
         <div class="topbar-one">
             <div class="container">
                 <div class="topbar-one__left">
-                    <a href="#">needhelp@kipso.com</a>
-                    <a href="#">444 888 0000</a>
+                    <a href="#">solutiononanytopic@gmail.com</a>
+                    <a href="#">+16572480587</a>
                 </div><!-- /.topbar-one__left -->
                 <div class="topbar-one__right">
                     <a href="#">Login</a>
