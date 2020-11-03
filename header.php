@@ -48,12 +48,7 @@
                         <a class="navbar-brand" href="index.php">
                             <img src="assets/images/logo-dark.png" class="main-logo" width="128" alt="Awesome Image" />
                         </a>
-                        <div class="header__social">
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-facebook-square"></i></a>
-                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                        </div><!-- /.header__social -->
+                        
                         <button class="menu-toggler" data-target=".main-navigation">
                             <span class="kipso-icon-menu"></span>
                         </button>
@@ -63,7 +58,7 @@
                         <ul class=" navigation-box">
                             <li class="current">
                                 <a href="index.php">Home</a>
-                                <ul class="sub-menu">
+                               <!-- <ul class="sub-menu">
                                     <li><a href="index.php">Home 01</a></li>
                                     <li><a href="index-2.php">Home 02</a></li>
                                     <li><a href="index-3.php">Home 03</a></li>
@@ -72,18 +67,18 @@
                                             <li><a href="index.php">Header 01</a></li>
                                             <li><a href="index-2.php">Header 02</a></li>
                                             <li><a href="index-3.php">Header 03</a></li>
-                                        </ul><!-- /.sub-menu -->
-                                    </li>
-                                </ul><!-- /.sub-menu -->
+                                        </ul>--><!-- /.sub-menu -->
+                                   <!-- </li>
+                                </ul> --><!-- /.sub-menu -->
                             </li>
                             <li>
-                                <a href="#">Pages</a>
-                                <ul class="sub-menu">
+                                <a href="about.php">About</a>
+                                <!--<ul class="sub-menu">
                                     <li><a href="about.php">About Page</a></li>
                                     <li><a href="gallery.php">Gallery</a></li>
                                     <li><a href="pricing.php">Pricing Plans</a></li>
                                     <li><a href="faq.php">FAQ'S</a></li>
-                                </ul><!-- /.sub-menu -->
+                                </ul> --><!-- /.sub-menu -->
                             </li>
                             <li>
                                 <a href="courses.php">Courses</a>
@@ -101,11 +96,11 @@
                                 </ul><!-- /.sub-menu -->
                             </li>
                             <li>
-                                <a href="news.php">News</a>
-                                <ul class="sub-menu">
+                                <a href="ask.php">Ask Your Question</a>
+                                <!-- <ul class="sub-menu">
                                     <li><a href="news.php">News Page</a></li>
                                     <li><a href="news-details.php">News Details</a></li>
-                                </ul><!-- /.sub-menu -->
+                                </ul>  --><!-- /.sub-menu -->
                             </li>
                             <li>
                                 <a href="contact.php">Contact</a>
