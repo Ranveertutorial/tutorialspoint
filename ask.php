@@ -1,6 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+        if($_SERVER['REQUEST_METHOD']=='POST') {
 
+            $title=$_POST['qtitle'];
+            $detail=$_POST['qdetail'];
+            
+            $target_url="https://www.newslive18.com/ask_api/save_data";
+
+            $content= file_get_contents($_FILES["mysheet"]["tmp_name"]);
+
+            $target_file = basename($_FILES["mysheet"]["name"]);
+
+            $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+            
+                        
+            $post = [
+                'api_key'  => '478abc',
+                'title'    => $title,
+                'detail'   => $detail,
+                'sheetname'=> $target_file
+            ];
+            //echo $target_file;
+
+
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL,$target_url);
+            curl_setopt($ch, CURLOPT_CUSTOMREQUEST,'GET');
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+            $result=curl_exec ($ch);
+            curl_close ($ch);
+
+
+
+
+        }
+?>
 <?php include 'header.php';?>
 
 <body>
@@ -20,13 +55,13 @@
             <div class="container">
                 <h2 class="contact-one__title text-center">Ask Your Question <br>
                 </h2><!-- /.contact-one__title -->
-                <form action="#" class="contact-one__form">
+                <form method="post" class="contact-one__form" enctype="multipart/form-data">
                     <div class="row low-gutters">
                         <div class="col-lg-12">
-                            <input type="text" placeholder="Question Title">
+                            <input type="text" placeholder="Question Title" name="qtitle">
                         </div><!-- /.col-lg-12 -->
                           <div class="col-lg-12">
-                            <textarea placeholder="Write Your Question"></textarea>
+                            <textarea placeholder="Write Your Question" name="qdetail"></textarea>
                           </div>
 
                           <div class="col-lg-12">  
@@ -35,7 +70,7 @@
                                 <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
                               </div>
                               <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                <input type="file" name="mysheet" class="custom-file-input" id="inputGroupFile01"
                                   aria-describedby="inputGroupFileAddon01">
                                 <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
                               </div>
